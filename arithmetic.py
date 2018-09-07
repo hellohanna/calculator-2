@@ -41,10 +41,16 @@ def cube(num1):
     return num1 * num1 * num1
 
 
-def power(num1, num2):
+def power(numbers):
     """Raise num1 to the power of num and return the value."""
+    number_of_numbers = len(numbers)
+    my_exponent = numbers[number_of_numbers-1]
+    result = 0
+    for i in reversed(range(0,len(numbers)-1)):
+        result = numbers[i]**my_exponent
+        my_exponent = result
 
-    return num1 ** num2  # ** = exponent operator
+    return result
 
 
 def mod(num1, num2):
